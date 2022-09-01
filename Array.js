@@ -15,21 +15,26 @@ let imagenesProductosMio=[
 */
 
 const nombresUsuario = []
-const imagenesUsuaeio = []
+const imagenesUsuario = []
 
 for (let i = 0; i < imagenesProductos.length; i++) {
     document.querySelector("#contenedor_base").innerHTML += `
-    ${nombresPorductos[i]}<p/>
-    <img width='400' height='400' src=${imagenesProductos[i]}><p/>
+    <center>${nombresPorductos[i]}<p/>
+    <img width='400' height='400' src=${imagenesProductos[i]}></center>
     `;
 }
 
 function elementosAgregadosPorUsuario(){
     let nombresAgregados = document.querySelector("#nombre_ingresado_usuario").value;
     nombresUsuario.push(nombresAgregados);
-    document.querySelector("#elementos_usuario").innerHTML += `
-    ${nombresUsuario[i]}<p/>
-    `;
+    let imagenesAgregadas = document.querySelector("#imagen_ingresada_usuario").value;
+    imagenesUsuario.push(imagenesAgregadas);
+    for (let i = 0; i < nombresUsuario.length; i++) {
+        document.querySelector("#elementos_usuario").innerHTML += `
+        <center>${nombresUsuario[i]}<p/>
+        <img width='400' height='400' src=${imagenesUsuario[i]}></center>
+        `;        
+    }
 }
 
 
